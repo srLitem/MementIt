@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:mementit/widgets/memento/memento.dart';
 
-class MementoList extends StatefulWidget {
+class MementoList extends StatelessWidget {
   
   List<Memento> mementoL; // List of the mementos
 
   MementoList(this.mementoL); //Constructor
 
   @override
-  _MementoListState createState() => _MementoListState();
-}
-
-class _MementoListState extends State<MementoList> {
-  @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: widget.mementoL.length, //Will be the size of the mementos List
+      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 6),
+      itemCount: mementoL.length, //Will be the size of the mementos List
       itemBuilder: (context, index){
-        return widget.mementoL[index];
+        return mementoL[index];
       },
     );
   }

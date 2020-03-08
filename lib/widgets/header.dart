@@ -1,4 +1,3 @@
-//TODO: Build a class to return the widget of the topbar of the app
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -9,40 +8,68 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container( 
+    return Container(
       //* Size of the header
-     width: MediaQuery.of(context).size.width, 
-     height: MediaQuery.of(context).size.height/6,
-     padding: EdgeInsets.all(10),
-     //*Decoration
-     decoration: BoxDecoration(
-       color: Colors.white,
-     ),
-     //*Childrens
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height / 6,
+      padding: EdgeInsets.all(10),
+      //*Decoration
+      decoration: BoxDecoration(
+        color: Color.fromRGBO(78, 114, 181, 1),
+      ),
+      //*Childrens
       child: Stack(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              // Information of the header
-              Column(
-                children: <Widget>[
-                  Text(name),
-                  Text('My mementos: $mementos')
-              ],),
-              // Profile picture
-              Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                // Information of the header
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      name,
+                      style: styleOfText(25.0, FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'My mementos: $mementos',
+                      style: styleOfText(20.0, FontWeight.normal)
+                    ),
+                  ],
                 ),
-                child: Image(
-                  image: AssetImage('assets/img/profileTest.png'),
-                  fit: BoxFit.fill,
-                  width: 100,
-                  height: 100,
+                // Profile picture
+                Container(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
                   ),
-              ),
-          ],),
-      ],),
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/img/profileTest.png'),
+                    radius: 40,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  TextStyle styleOfText(double size, FontWeight weight) {
+    return TextStyle(
+      fontFamily: 'Sans',
+      fontSize: size,
+      fontWeight: weight,
+      color: Color.fromRGBO(78, 114, 181, 1),
     );
   }
 }

@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Memento extends  StatefulWidget {
+class Memento extends  StatelessWidget {
   String title;
 
   Memento(this.title);
 
-  @override
-  _Memento createState() => _Memento();
-}
-
-class _Memento extends State<Memento> {
   @override
   Widget build(BuildContext context) {
     return Card( //* Structure of the memento card shown in the main page
@@ -18,7 +13,7 @@ class _Memento extends State<Memento> {
       child: Column(
         children: <Widget>[
           ListTile(
-            title: Text(widget.title),
+            title: Text(title),
             subtitle: Text(
               'Test',
               style: TextStyle(

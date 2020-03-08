@@ -10,9 +10,16 @@ class MementoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
+        background(Color.fromRGBO(78, 114, 181, 1)),
         MementoList(mementoL),
-        Header('Santiago', 3),
+        Header('Santiago Rhenals', 5),
       ],
     );
+  }
+
+  Container background(Color color){
+    return Container(
+          color: color,
+        );
   }
 }
