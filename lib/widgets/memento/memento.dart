@@ -8,6 +8,9 @@ class Memento extends  StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card( //* Structure of the memento card shown in the main page
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
       margin: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
       elevation: 8,
       child: Column(
