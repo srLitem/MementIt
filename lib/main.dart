@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mementit/widgets/structure.dart';
+import 'package:mementit/widgets/route_generator.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Sans',
         primarySwatch: Colors.blue,
       ),
-      home: SafeArea(child: Structure()),
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

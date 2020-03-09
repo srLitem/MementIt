@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-  String name;
-  int mementos;
+  final String name;
+  final int mementos;
 
   Header(this.name, this.mementos);
 

@@ -3,7 +3,7 @@ import 'package:mementit/widgets/memento/memento.dart';
 
 class MementoList extends StatelessWidget {
   
-  List<Memento> mementoL; // List of the mementos
+  final List<Memento> mementoL; // List of the mementos
 
   MementoList(this.mementoL); //Constructor
 
