@@ -26,19 +26,26 @@ class MementoPage extends StatelessWidget {
               children: <Widget>[
                 FloatingActionButton(
                   backgroundColor: Colors.white,
-                  child: Icon(Icons.search, color: Color.fromRGBO(78, 114, 181, 1),),
+                  child: Icon(
+                    Icons.search,
+                    color: Color.fromRGBO(78, 114, 181, 1),
+                  ),
                   onPressed: () => {debugPrint('Search a Memento')},
                   mini: true,
-                  ),
-                  SizedBox(width: 15,),
-                  FloatingActionButton(
-                  backgroundColor: Colors.white,
-                  child: Icon(Icons.library_add, color: Color.fromRGBO(78, 114, 181, 1),),
-                  onPressed: () => {debugPrint('Add a Memento')}
-                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                FloatingActionButton(
+                    backgroundColor: Colors.white,
+                    child: Icon(
+                      Icons.library_add,
+                      color: Color.fromRGBO(78, 114, 181, 1),
+                    ),
+                    onPressed: () => {debugPrint('Add a Memento')}),
               ],
             ),
-            ),
+          ),
         ),
       ],
     );
@@ -46,7 +53,13 @@ class MementoPage extends StatelessWidget {
 
   Container background(Color color) {
     return Container(
-      color: color,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [color, color.withOpacity(.6)],
+            stops: [0.2, 0.6],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter),
+      ),
     );
   }
 }

@@ -21,7 +21,7 @@ class Header extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
@@ -41,7 +41,7 @@ class Header extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      'My mementos: $mementos',
+                      'My Mementos: $mementos',
                       style: styleOfText(20.0, FontWeight.normal)
                     ),
                   ],
@@ -53,7 +53,7 @@ class Header extends StatelessWidget {
                   ),
                   child: CircleAvatar(
                     backgroundImage: AssetImage('assets/img/profileTest.png'),
-                    radius: 40,
+                    radius: 35,
                   ),
                 ),
               ],
@@ -69,6 +69,7 @@ class Header extends StatelessWidget {
       fontFamily: 'Sans',
       fontSize: size,
       fontWeight: weight,
+      fontStyle: FontStyle.italic,
       color: Color.fromRGBO(78, 114, 181, 1),
     );
   }
