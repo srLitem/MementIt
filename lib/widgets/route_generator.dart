@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mementit/main.dart';
 import 'package:mementit/widgets/memento/memento_details.dart';
 import 'package:mementit/widgets/memento/memento_page.dart';
 
@@ -12,7 +11,7 @@ class RouteGenerator{
       return MaterialPageRoute(builder: (_) => SafeArea(child: MementoPage()));
 
       case '/details':
-      return MaterialPageRoute(builder: (_) => SafeArea(child: MementoDetails(title: args,)));
+      return MaterialPageRoute(builder: (_) => SafeArea(child: MementoDetails()));
     }
 
   }
