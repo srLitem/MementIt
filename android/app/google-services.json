@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "379504259086",
+    "firebase_url": "https://mementit.firebaseio.com",
+    "project_id": "mementit",
+    "storage_bucket": "mementit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379504259086:android:d87d6a0f9cd0713d9d4c5f",
+        "android_client_info": {
+          "package_name": "com.example.mementit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379504259086-v3983es3dkq35ls7buudrr1446mmhfvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEmQkJV2g6nplsife6hSFoTgF7lK1sbnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379504259086-v3983es3dkq35ls7buudrr1446mmhfvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

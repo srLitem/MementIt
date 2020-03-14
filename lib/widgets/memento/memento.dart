@@ -3,15 +3,18 @@ import 'package:flutter/material.dart';
 //* Widget to provide the memento information
 //* Card with a nested Column
 class Memento extends StatelessWidget {
-  @required final String title;
-  @required final String description;
+  @required
+  final String title;
+  @required
+  final String description;
 
   Memento(this.title, this.description);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {Navigator.of(context).pushNamed('/details', arguments: title)},
+      onTap: () =>
+          {Navigator.of(context).pushNamed('/details')},
       //* Structure of the memento card shown in the main page
       child: Card(
         shape: RoundedRectangleBorder(

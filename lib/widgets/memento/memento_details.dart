@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:mementit/widgets/memento/memento.dart';
 
 class MementoDetails extends StatelessWidget {
-  final title;
-  final description;
-  MementoDetails({this.title,this.description});
+  @required
+  final Memento tappedMemento;
+
+  MementoDetails({this.tappedMemento});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Column(
+      body: Center(
+          child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text('Test'),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Text('Description'),
         ],
       )),
