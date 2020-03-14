@@ -15,7 +15,7 @@ class MementoPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          background(Color.fromRGBO(78, 114, 181, 1)),
+          background(Color.fromRGBO(224, 118, 72, 1)),
           MementoList(mementoL),
           Header('Santiago Rhenals', 5),
           Padding(
@@ -30,7 +30,7 @@ class MementoPage extends StatelessWidget {
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.search,
-                      color: Color.fromRGBO(78, 114, 181, 1),
+                      color: Color.fromRGBO(224, 118, 72, 1),
                     ),
                     onPressed: () => {debugPrint('Search a Memento')},
                     mini: true,
@@ -43,7 +43,7 @@ class MementoPage extends StatelessWidget {
                       backgroundColor: Colors.white,
                       child: Icon(
                         Icons.library_add,
-                        color: Color.fromRGBO(78, 114, 181, 1),
+                        color: Color.fromRGBO(224, 118, 72, 1),
                       ),
                       onPressed: () => {debugPrint('Add a Memento')}),
                 ],

@@ -31,14 +31,14 @@ class Memento extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Sans',
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(78, 114, 181, 1),
+                  color: Color.fromRGBO(224, 118, 72, 1),
                 ),
               ),
               //* Description of the memento
               subtitle: Text(
                 description,
                 style: TextStyle(
-                  color: Color.fromRGBO(78, 114, 181, .9),
+                  color: Color.fromRGBO(224, 118, 72, .9),
                   fontFamily: 'Sans',
                   fontStyle: FontStyle.italic,
                 ),
@@ -47,7 +47,7 @@ class Memento extends StatelessWidget {
               trailing: Text(
                 '03-04-2019',
                 style: TextStyle(
-                  color: Color.fromRGBO(78, 114, 181, .9),
+                  color: Color.fromRGBO(224, 118, 72, .9),
                   fontFamily: 'Sans',
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mementit/widgets/login/login_page.dart';
 import 'package:mementit/widgets/memento/memento_details.dart';
 import 'package:mementit/widgets/memento/memento_page.dart';
 
@@ -10,13 +11,16 @@ class RouteGenerator{
       //*Main route 
       //* In this case, The Memento Page
       case '/': 
+      return MaterialPageRoute(builder: (_) => SafeArea(child: LoginPage()));
+      //* Main screen
+      case '/main': 
       return MaterialPageRoute(builder: (_) => SafeArea(child: MementoPage()));
       //* Memento details page
       case '/details': 
       return MaterialPageRoute(builder: (_) => SafeArea(child: MementoDetails()));
       //* By default, the user is redirected to the main Memento Page
       default:
-      return MaterialPageRoute(builder: (_) => SafeArea(child: MementoPage()));
+      return MaterialPageRoute(builder: (_) => SafeArea(child: LoginPage()));
     }
 
   }
