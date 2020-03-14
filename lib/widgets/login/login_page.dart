@@ -70,13 +70,13 @@ class LoginPage extends StatelessWidget {
                         //* Button to log in with google
                         RaisedButton(
                           //* Login and redirect the users to the main screen
-                          //TODO: Implement login method
-                          onPressed: () => {Navigator.of(context).pushNamed('/main')},
+                          //TODO: Implement login method and pushNamedUntil
+                          onPressed: () => {Navigator.of(context).pushReplacementNamed('/main')}, 
                           color:
                               Color.fromRGBO(224, 118, 72, 1).withOpacity(.9),
                           splashColor: Colors.white,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(30)),
                           //* Row to add google icon
                           child: Row(
                             mainAxisSize: MainAxisSize.min,

@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MementIt!',
       theme: ThemeData(
-        fontFamily: 'Sans',
+        fontFamily: 'OpenSans',
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',

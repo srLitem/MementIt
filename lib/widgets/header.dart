@@ -45,7 +45,7 @@ class Header extends StatelessWidget {
                     //* Number of mementos
                     Text(
                       'My Mementos: $mementos',
-                      style: styleOfText(20.0, FontWeight.normal)
+                      style: styleOfText(18.0, FontWeight.normal)
                     ),
                   ],
                 ),
