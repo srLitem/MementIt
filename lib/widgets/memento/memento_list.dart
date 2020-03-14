@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mementit/widgets/memento/memento.dart';
 
+//* Widget to provide the list of mementos that the user has stored
 class MementoList extends StatelessWidget {
   
   final List<Memento> mementoL; // List of the mementos

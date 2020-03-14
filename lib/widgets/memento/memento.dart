@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//* Widget to provide the memento information
+//* Card with a nested Column
 class Memento extends StatelessWidget {
   @required final String title;
   @required final String description;
@@ -10,8 +12,8 @@ class Memento extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {Navigator.of(context).pushNamed('/details', arguments: title)},
+      //* Structure of the memento card shown in the main page
       child: Card(
-        //* Structure of the memento card shown in the main page
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
@@ -20,6 +22,7 @@ class Memento extends StatelessWidget {
         child: Column(
           children: <Widget>[
             ListTile(
+              //* Name of the memento
               title: Text(
                 title,
                 style: TextStyle(
@@ -28,6 +31,7 @@ class Memento extends StatelessWidget {
                   color: Color.fromRGBO(78, 114, 181, 1),
                 ),
               ),
+              //* Description of the memento
               subtitle: Text(
                 description,
                 style: TextStyle(
@@ -36,6 +40,7 @@ class Memento extends StatelessWidget {
                   fontStyle: FontStyle.italic,
                 ),
               ),
+              //* Creation date of the memento
               trailing: Text(
                 '03-04-2019',
                 style: TextStyle(
@@ -44,6 +49,7 @@ class Memento extends StatelessWidget {
                 ),
               ),
             ),
+            //* Memento picture
             Container(
               child: Image(
                 image: AssetImage('assets/img/test.png'),

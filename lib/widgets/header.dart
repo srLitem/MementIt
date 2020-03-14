@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//* Widget to provide the header of the applciation
 class Header extends StatelessWidget {
   final String name;
   final int mementos;
@@ -29,10 +30,11 @@ class Header extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                // Information of the header
+                //* Information of the header
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    //* Name of the user
                     Text(
                       name,
                       style: styleOfText(25.0, FontWeight.bold),
@@ -40,13 +42,14 @@ class Header extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
+                    //* Number of mementos
                     Text(
                       'My Mementos: $mementos',
                       style: styleOfText(20.0, FontWeight.normal)
                     ),
                   ],
                 ),
-                // Profile picture
+                //* Profile picture
                 Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -69,7 +72,7 @@ class Header extends StatelessWidget {
       fontFamily: 'Sans',
       fontSize: size,
       fontWeight: weight,
-      fontStyle: FontStyle.italic,
+      fontStyle: FontStyle.normal,
       color: Color.fromRGBO(78, 114, 181, 1),
     );
   }
