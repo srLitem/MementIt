@@ -35,18 +35,23 @@ class Header extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     //* Name of the user
-                    Text(
-                      name,
-                      style: styleOfText(25.0, FontWeight.bold),
-                    ),
+                    Text(name,
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.normal,
+                          color: Colors.black,
+                        )),
                     SizedBox(
                       height: 10,
                     ),
                     //* Number of mementos
-                    Text(
-                      'My Mementos: $mementos',
-                      style: styleOfText(18.0, FontWeight.normal)
-                    ),
+                    Text('My Mementos: $mementos',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontStyle: FontStyle.normal,
+                          color: Colors.black,
+                        )),
                   ],
                 ),
                 //* Profile picture
@@ -67,13 +72,4 @@ class Header extends StatelessWidget {
     );
   }
 
-  TextStyle styleOfText(double size, FontWeight weight) {
-    return TextStyle(
-      fontFamily: 'Sans',
-      fontSize: size,
-      fontWeight: weight,
-      fontStyle: FontStyle.normal,
-      color: Color.fromRGBO(224, 118, 72, 1),
-    );
-  }
 }

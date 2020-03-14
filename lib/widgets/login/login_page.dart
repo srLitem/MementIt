@@ -13,95 +13,75 @@ class LoginPage extends StatelessWidget {
             //* Background color
             Container(
               decoration: BoxDecoration(
-                color: Color.fromRGBO(224, 118, 72, 1),
+                color: Colors.white,
               ),
             ),
             //* Login section
             Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  //* Mementit Logo
-                  Text(
-                    'Mementit!',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold),
+              child: Text(
+                'Mementit!',
+                style: TextStyle(
+                    color: Color.fromRGBO(224, 118, 72, 1),
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            //* login Card
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3.5,
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(224, 118, 72, 1),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
                   ),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  //* Login Card
-                  Container(
-                    width: MediaQuery.of(context).size.width / 1.3,
-                    height: MediaQuery.of(context).size.height / 2,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5,
+                      offset: Offset(
+                        4,
+                        4,
+                      ),
+                    )
+                  ],
+                ),
+                child: Center(
+                  child: RaisedButton(
+                    //* Login and redirect the users to the main screen
+                    //TODO: Implement login method and pushNamedUntil
+                    onPressed: () =>
+                        {Navigator.of(context).pushNamed('/main')},
+                    color: Colors.white,
+                    splashColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    //* Row to add google icon
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        SizedBox(
-                          height: 20,
-                        ),
-                        //*Icon/Image related to login
-                        Icon(
-                          Icons.person,
-                          color: Color.fromRGBO(224, 118, 72, 1),
-                          size: 70,
-                        ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                        //* Login information text
+                        Container(
+                            width: 25,
+                            height: 25,
+                            child: Image.asset('assets/img/google_logo.png')),
+                        SizedBox(width: 10),
                         Text(
-                          'Login with your google account',
-                          textAlign: TextAlign.justify,
+                          'Sign in with Google',
                           style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
+                              color: Color.fromRGBO(224, 118, 72, 1),
+                              fontSize: 21,
                               fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                        //* Button to log in with google
-                        RaisedButton(
-                          //* Login and redirect the users to the main screen
-                          //TODO: Implement login method and pushNamedUntil
-                          onPressed: () => {Navigator.of(context).pushReplacementNamed('/main')}, 
-                          color:
-                              Color.fromRGBO(224, 118, 72, 1).withOpacity(.9),
-                          splashColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          //* Row to add google icon
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              Container(
-                                child: Icon(
-                                  Icons.near_me,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(width: 10),
-                              Text(
-                                'Sign in with Google',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ],
-                          ),
                         ),
                       ],
                     ),
                   ),
-                ],
+                ),
               ),
             ),
           ],

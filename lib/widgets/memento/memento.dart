@@ -29,26 +29,22 @@ class Memento extends StatelessWidget {
               title: Text(
                 title,
                 style: TextStyle(
-                  fontFamily: 'Sans',
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(224, 118, 72, 1),
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
                 ),
               ),
               //* Description of the memento
               subtitle: Text(
                 description,
                 style: TextStyle(
-                  color: Color.fromRGBO(224, 118, 72, .9),
-                  fontFamily: 'Sans',
-                  fontStyle: FontStyle.italic,
+                  color: Colors.grey,
                 ),
               ),
               //* Creation date of the memento
               trailing: Text(
                 '03-04-2019',
                 style: TextStyle(
-                  color: Color.fromRGBO(224, 118, 72, .9),
-                  fontFamily: 'Sans',
+                  color: Colors.grey.withOpacity(.9),
                 ),
               ),
             ),
