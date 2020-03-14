@@ -17,18 +17,34 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             //* Login section
-            Center(
-              child: Text(
-                'Mementit!',
-                style: TextStyle(
-                    color: Color.fromRGBO(224, 118, 72, 1),
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 80,
+                ),
+                child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Color.fromRGBO(84, 126, 222, 1),
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset('assets/img/logof.png'),
+                    )),
               ),
             ),
-            SizedBox(
-              height: 40,
-            ),
+            Center(
+                child: Text(
+              'Welcome!',
+              style: TextStyle(
+                color: Color.fromRGBO(84, 126, 222, 1),
+                fontSize: 30,
+              ),
+            )),
             //* login Card
             Align(
               alignment: Alignment.bottomCenter,
@@ -36,7 +52,7 @@ class LoginPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 3.5,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(224, 118, 72, 1),
+                  color: Color.fromRGBO(84, 126, 222, 1),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
@@ -56,8 +72,7 @@ class LoginPage extends StatelessWidget {
                   child: RaisedButton(
                     //* Login and redirect the users to the main screen
                     //TODO: Implement login method and pushNamedUntil
-                    onPressed: () =>
-                        {Navigator.of(context).pushNamed('/main')},
+                    onPressed: () => {Navigator.of(context).pushNamed('/main')},
                     color: Colors.white,
                     splashColor: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -74,9 +89,9 @@ class LoginPage extends StatelessWidget {
                         Text(
                           'Sign in with Google',
                           style: TextStyle(
-                              color: Color.fromRGBO(224, 118, 72, 1),
-                              fontSize: 21,
-                              fontWeight: FontWeight.bold),
+                            color: Color.fromRGBO(84, 126, 222, 1),
+                            fontSize: 21,
+                          ),
                         ),
                       ],
                     ),

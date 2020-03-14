@@ -16,7 +16,7 @@ class Header extends StatelessWidget {
       padding: EdgeInsets.all(10),
       //*Decoration
       decoration: BoxDecoration(
-        color: Color.fromRGBO(224, 118, 72, 1),
+        color: Color.fromRGBO(84, 126, 222, 1),
       ),
       //*Childrens
       child: Stack(
@@ -40,7 +40,7 @@ class Header extends StatelessWidget {
                           fontSize: 25,
                           fontWeight: FontWeight.w600,
                           fontStyle: FontStyle.normal,
-                          color: Colors.black,
+                          color: Color.fromRGBO(84, 126, 222, 1),
                         )),
                     SizedBox(
                       height: 10,
@@ -50,7 +50,7 @@ class Header extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 15,
                           fontStyle: FontStyle.normal,
-                          color: Colors.black,
+                          color: Color.fromRGBO(84, 126, 222, 1),
                         )),
                   ],
                 ),
