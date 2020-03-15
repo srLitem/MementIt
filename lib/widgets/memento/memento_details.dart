@@ -19,6 +19,11 @@ class MementoDetails extends StatelessWidget {
             height: 20,
           ),
           Text('Description'),
+          RaisedButton(
+            onPressed: () => {debugPrint('I am camera')},
+            child: Text('Open Camera',
+            style: TextStyle(color: Colors.white),),
+          ),
         ],
       )),
     );
