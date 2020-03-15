@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 //* Widget to provide the memento information
 //* Card with a nested Column
+//* -----------------
+
 class Memento extends StatelessWidget {
   @required
   final String title;

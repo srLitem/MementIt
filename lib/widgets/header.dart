@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 //* Widget to provide the header of the applciation
+//* -----------------
+
 class Header extends StatelessWidget {
   final String name;
   final int mementos;

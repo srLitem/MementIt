@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mementit/widgets/memento/memento.dart';
 
+//* Widget that returns the details page of the 
+//* selected memento
+//* -----------------
+
 class MementoDetails extends StatelessWidget {
   @required
   final Memento tappedMemento;

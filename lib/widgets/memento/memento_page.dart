@@ -3,6 +3,9 @@ import 'package:mementit/widgets/header.dart';
 import 'package:mementit/widgets/memento/memento.dart';
 import 'package:mementit/widgets/memento/memento_list.dart';
 
+//* Widget to return the main Memento Page
+//* -----------------
+
 class MementoPage extends StatelessWidget {
   final List<Memento> mementoL = [
     Memento('Omaritou', 'Talentoso'),

@@ -4,6 +4,8 @@ import 'package:mementit/widgets/memento/memento_details.dart';
 import 'package:mementit/widgets/memento/memento_page.dart';
 
 //* Widget to set the routes that the application would be using
+//* -----------------
+
 class RouteGenerator{
   static Route<dynamic> generateRoute(RouteSettings settings){
 

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mementit/services/auth.dart';
 
 //*Login screen Page using Google Auth
+//* -----------------
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
 
@@ -71,8 +74,12 @@ class LoginPage extends StatelessWidget {
                 child: Center(
                   child: RaisedButton(
                     //* Login and redirect the users to the main screen
-                    //TODO: Implement login method and pushNamedUntil
-                    onPressed: () => {Navigator.of(context).pushNamed('/main')},
+                    //TODO: Implement loading spinner
+                    onPressed: () => {
+                      signInWithGoogle().whenComplete( () => [
+                        Navigator.of(context).pushNamed('/main')
+                      ])
+                      },
                     color: Colors.white,
                     splashColor: Colors.white,
                     shape: RoundedRectangleBorder(
